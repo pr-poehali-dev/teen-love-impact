@@ -319,6 +319,389 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">
+              Стадии влюблённости
+            </h2>
+            <p className="text-xl text-gray-600">
+              Как развиваются романтические чувства у подростков
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+            <Card className="bg-gradient-to-br from-pink-100 to-rose-100 border-2 border-pink-300 hover:scale-105 transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center text-white text-2xl font-bold">
+                  1
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-gray-800">Симпатия</h3>
+                <p className="text-sm text-gray-600">Первые мысли о человеке, интерес к его жизни</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-purple-100 to-pink-100 border-2 border-purple-300 hover:scale-105 transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl font-bold">
+                  2
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-gray-800">Увлечение</h3>
+                <p className="text-sm text-gray-600">Частые мысли, волнение при встрече, попытки привлечь внимание</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-red-100 to-orange-100 border-2 border-red-300 hover:scale-105 transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center text-white text-2xl font-bold">
+                  3
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-gray-800">Влюблённость</h3>
+                <p className="text-sm text-gray-600">Пик эмоций, идеализация объекта, сильные переживания</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-blue-100 to-cyan-100 border-2 border-blue-300 hover:scale-105 transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white text-2xl font-bold">
+                  4
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-gray-800">Привязанность</h3>
+                <p className="text-sm text-gray-600">Спокойные чувства, доверие, желание быть рядом</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-green-100 to-emerald-100 border-2 border-green-300 hover:scale-105 transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white text-2xl font-bold">
+                  5
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-gray-800">Зрелая любовь</h3>
+                <p className="text-sm text-gray-600">Глубокое понимание, уважение, поддержка партнёра</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+              Мифы и реальность
+            </h2>
+            <p className="text-xl text-gray-600">
+              Развенчиваем популярные заблуждения о первой любви
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card className="bg-white border-2 border-red-200">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <Icon name="X" size={32} className="text-red-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 text-red-700">Миф</h3>
+                    <p className="text-gray-700">"Первая любовь всегда навсегда"</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-2 border-green-200">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <Icon name="Check" size={32} className="text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 text-green-700">Реальность</h3>
+                    <p className="text-gray-700">Только 2% пар остаются вместе после школы. Первая любовь — это опыт, а не судьба.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-2 border-red-200">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <Icon name="X" size={32} className="text-red-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 text-red-700">Миф</h3>
+                    <p className="text-gray-700">"Влюблённость мешает учиться"</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-2 border-green-200">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <Icon name="Check" size={32} className="text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 text-green-700">Реальность</h3>
+                    <p className="text-gray-700">42% подростков улучшили успеваемость, желая произвести впечатление.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-2 border-red-200">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <Icon name="X" size={32} className="text-red-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 text-red-700">Миф</h3>
+                    <p className="text-gray-700">"Подростковая любовь несерьёзна"</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-2 border-green-200">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <Icon name="Check" size={32} className="text-green-500 flex-shrink-0 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 text-green-700">Реальность</h3>
+                    <p className="text-gray-700">Чувства подростков такие же сильные, как у взрослых. Просто меньше опыта их обработки.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              Влияние на разные сферы жизни
+            </h2>
+            <p className="text-xl text-gray-600">
+              Комплексный взгляд на изменения в жизни подростка
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <Card className="bg-white border-2 hover:shadow-2xl transition-all">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center">
+                    <Icon name="TrendingUp" size={24} className="text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800">Позитивные эффекты</h3>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl">✓</span>
+                    <span className="text-gray-700">Развитие эмпатии и понимания других людей</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl">✓</span>
+                    <span className="text-gray-700">Повышение самооценки при взаимности чувств</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl">✓</span>
+                    <span className="text-gray-700">Стимул к самосовершенствованию и развитию</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl">✓</span>
+                    <span className="text-gray-700">Приобретение опыта построения отношений</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 text-xl">✓</span>
+                    <span className="text-gray-700">Развитие эмоционального интеллекта</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-2 hover:shadow-2xl transition-all">
+              <CardContent className="p-8">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center">
+                    <Icon name="AlertTriangle" size={24} className="text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800">Негативные эффекты</h3>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl">!</span>
+                    <span className="text-gray-700">Снижение концентрации на учёбе и важных делах</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl">!</span>
+                    <span className="text-gray-700">Риск депрессии при неразделённых чувствах</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl">!</span>
+                    <span className="text-gray-700">Конфликты с друзьями из-за нехватки времени</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl">!</span>
+                    <span className="text-gray-700">Эмоциональная нестабильность и перепады настроения</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-orange-500 text-xl">!</span>
+                    <span className="text-gray-700">Зависимость от мнения объекта влюблённости</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-rose-50 to-pink-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent">
+              Роль родителей и учителей
+            </h2>
+            <p className="text-xl text-gray-600">
+              Как взрослые могут помочь подростку в этот период
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="bg-white border-2 border-blue-200 hover:shadow-xl transition-all">
+              <CardContent className="p-8">
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4">👨‍👩‍👧‍👦</div>
+                  <h3 className="text-2xl font-bold text-gray-800">Родители</h3>
+                </div>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <Icon name="Heart" size={20} className="text-pink-500 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Проявлять эмпатию, вспомнить свою первую любовь</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="MessageCircle" size={20} className="text-blue-500 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Поддерживать открытый диалог без осуждения</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Shield" size={20} className="text-green-500 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Давать советы по безопасности в отношениях</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Users" size={20} className="text-purple-500 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Не запрещать, а помогать выстраивать границы</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-2 border-purple-200 hover:shadow-xl transition-all">
+              <CardContent className="p-8">
+                <div className="text-center mb-6">
+                  <div className="text-6xl mb-4">👨‍🏫</div>
+                  <h3 className="text-2xl font-bold text-gray-800">Учителя</h3>
+                </div>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <Icon name="Eye" size={20} className="text-indigo-500 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Замечать изменения в поведении ученика</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Book" size={20} className="text-cyan-500 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Обсуждать тему отношений на классных часах</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="Target" size={20} className="text-orange-500 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Помогать сохранять баланс учёбы и личной жизни</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Icon name="HandHeart" size={20} className="text-rose-500 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">Быть доступными для конфиденциальных разговоров</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-teal-50 to-cyan-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+              Методология исследования
+            </h2>
+            <p className="text-xl text-gray-600">
+              Как проводилось исследование для этого проекта
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <Card className="bg-white hover:shadow-xl transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 flex items-center justify-center">
+                  <Icon name="Users" size={32} className="text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">200</div>
+                <p className="text-gray-600">респондентов опрошено</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white hover:shadow-xl transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center">
+                  <Icon name="School" size={32} className="text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">5</div>
+                <p className="text-gray-600">школ участвовало</p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white hover:shadow-xl transition-all">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                  <Icon name="Calendar" size={32} className="text-white" />
+                </div>
+                <div className="text-3xl font-bold text-gray-800 mb-2">2</div>
+                <p className="text-gray-600">месяца длилось исследование</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="bg-white border-2">
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-6 text-gray-800 text-center">Этапы исследования</h3>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500 flex items-center justify-center text-white font-bold">
+                    1
+                  </div>
+                  <h4 className="font-bold text-gray-800 mb-2">Анкетирование</h4>
+                  <p className="text-sm text-gray-600">Онлайн-опрос подростков 15-17 лет</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center text-white font-bold">
+                    2
+                  </div>
+                  <h4 className="font-bold text-gray-800 mb-2">Интервью</h4>
+                  <p className="text-sm text-gray-600">Глубинные беседы с 30 участниками</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold">
+                    3
+                  </div>
+                  <h4 className="font-bold text-gray-800 mb-2">Анализ</h4>
+                  <p className="text-sm text-gray-600">Обработка данных и научной литературы</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 flex items-center justify-center text-white font-bold">
+                    4
+                  </div>
+                  <h4 className="font-bold text-gray-800 mb-2">Выводы</h4>
+                  <p className="text-sm text-gray-600">Формулировка рекомендаций</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 to-pink-100">
         <div className="max-w-4xl mx-auto text-center">
           <Icon name="BookOpen" size={64} className="mx-auto mb-6 text-purple-600" />
