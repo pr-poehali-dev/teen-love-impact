@@ -244,6 +244,81 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-cyan-50 to-blue-50">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
+              Советы подросткам
+            </h2>
+            <p className="text-xl text-gray-600">
+              Как справиться с влюблённостью и не потерять себя
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="bg-gradient-to-br from-green-50 to-emerald-50 border-2 border-green-200 hover:shadow-xl transition-all">
+              <CardContent className="p-6">
+                <div className="text-4xl mb-4 text-center">📚</div>
+                <h3 className="text-xl font-bold mb-3 text-gray-800 text-center">Не забывай об учёбе</h3>
+                <p className="text-gray-700 text-center">
+                  Влюблённость пройдёт, а знания останутся. Выдели время и для чувств, и для развития.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-200 hover:shadow-xl transition-all">
+              <CardContent className="p-6">
+                <div className="text-4xl mb-4 text-center">🗣️</div>
+                <h3 className="text-xl font-bold mb-3 text-gray-800 text-center">Говори о чувствах</h3>
+                <p className="text-gray-700 text-center">
+                  Не держи эмоции в себе. Поговори с друзьями, родителями или психологом.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-purple-50 to-pink-50 border-2 border-purple-200 hover:shadow-xl transition-all">
+              <CardContent className="p-6">
+                <div className="text-4xl mb-4 text-center">🎯</div>
+                <h3 className="text-xl font-bold mb-3 text-gray-800 text-center">Оставайся собой</h3>
+                <p className="text-gray-700 text-center">
+                  Не меняй себя ради другого человека. Настоящая любовь принимает тебя таким, какой ты есть.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-orange-50 to-red-50 border-2 border-orange-200 hover:shadow-xl transition-all">
+              <CardContent className="p-6">
+                <div className="text-4xl mb-4 text-center">⚖️</div>
+                <h3 className="text-xl font-bold mb-3 text-gray-800 text-center">Баланс важен</h3>
+                <p className="text-gray-700 text-center">
+                  Не забывай о друзьях, семье и хобби. Здоровые отношения не изолируют от мира.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-yellow-50 to-amber-50 border-2 border-yellow-200 hover:shadow-xl transition-all">
+              <CardContent className="p-6">
+                <div className="text-4xl mb-4 text-center">🧘</div>
+                <h3 className="text-xl font-bold mb-3 text-gray-800 text-center">Управляй эмоциями</h3>
+                <p className="text-gray-700 text-center">
+                  Учись понимать свои чувства. Медитация, спорт и хобби помогают справиться с волнением.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-indigo-50 to-violet-50 border-2 border-indigo-200 hover:shadow-xl transition-all">
+              <CardContent className="p-6">
+                <div className="text-4xl mb-4 text-center">💪</div>
+                <h3 className="text-xl font-bold mb-3 text-gray-800 text-center">Развивай себя</h3>
+                <p className="text-gray-700 text-center">
+                  Используй прилив энергии для саморазвития: спорт, творчество, новые навыки.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-100 to-pink-100">
         <div className="max-w-4xl mx-auto text-center">
           <Icon name="BookOpen" size={64} className="mx-auto mb-6 text-purple-600" />
