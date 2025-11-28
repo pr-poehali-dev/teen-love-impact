@@ -3,9 +3,89 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
 import { Progress } from '@/components/ui/progress';
+import { Button } from '@/components/ui/button';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('hero');
+  const [quizAnswers, setQuizAnswers] = useState<Record<string, string>>({});
+  const [quizResult, setQuizResult] = useState<string | null>(null);
+
+  const quizQuestions = [
+    {
+      id: 'q1',
+      question: 'Как часто ты думаешь о человеке, который тебе нравится?',
+      options: [
+        { value: 'a', text: 'Редко, только когда вижу', points: 1 },
+        { value: 'b', text: 'Несколько раз в день', points: 2 },
+        { value: 'c', text: 'Постоянно, почти каждую минуту', points: 3 },
+      ]
+    },
+    {
+      id: 'q2',
+      question: 'Как ты чувствуешь себя, когда видишь этого человека?',
+      options: [
+        { value: 'a', text: 'Спокойно, как обычно', points: 1 },
+        { value: 'b', text: 'Немного волнуюсь, улыбаюсь', points: 2 },
+        { value: 'c', text: 'Сильное волнение, учащается пульс', points: 3 },
+      ]
+    },
+    {
+      id: 'q3',
+      question: 'Влияет ли это на твою учёбу?',
+      options: [
+        { value: 'a', text: 'Нет, всё как обычно', points: 1 },
+        { value: 'b', text: 'Иногда отвлекаюсь', points: 2 },
+        { value: 'c', text: 'Сильно снизилась концентрация', points: 3 },
+      ]
+    },
+    {
+      id: 'q4',
+      question: 'Пытаешься ли ты привлечь внимание этого человека?',
+      options: [
+        { value: 'a', text: 'Нет, веду себя как обычно', points: 1 },
+        { value: 'b', text: 'Иногда стараюсь выглядеть лучше', points: 2 },
+        { value: 'c', text: 'Постоянно думаю, как произвести впечатление', points: 3 },
+      ]
+    },
+    {
+      id: 'q5',
+      question: 'Как ты реагируешь, если этот человек общается с другими?',
+      options: [
+        { value: 'a', text: 'Мне всё равно', points: 1 },
+        { value: 'b', text: 'Немного грущу или завидую', points: 2 },
+        { value: 'c', text: 'Испытываю сильную ревность', points: 3 },
+      ]
+    },
+  ];
+
+  const handleQuizAnswer = (questionId: string, value: string) => {
+    setQuizAnswers(prev => ({ ...prev, [questionId]: value }));
+    setQuizResult(null);
+  };
+
+  const calculateQuizResult = () => {
+    let totalPoints = 0;
+    quizQuestions.forEach(q => {
+      const answer = quizAnswers[q.id];
+      if (answer) {
+        const option = q.options.find(opt => opt.value === answer);
+        if (option) totalPoints += option.points;
+      }
+    });
+
+    if (Object.keys(quizAnswers).length < quizQuestions.length) {
+      setQuizResult('Пожалуйста, ответь на все вопросы!');
+      return;
+    }
+
+    if (totalPoints <= 7) {
+      setQuizResult('🙂 Симпатия - У тебя лёгкая симпатия. Это нормальное дружеское чувство, которое не мешает повседневной жизни.');
+    } else if (totalPoints <= 11) {
+      setQuizResult('😊 Увлечение - Ты явно увлечён(а) этим человеком! Чувства заметны, но ты пока контролируешь ситуацию.');
+    } else {
+      setQuizResult('😍 Влюблённость - Это настоящая влюблённость! Не забывай про себя, друзей и учёбу. Постарайся найти баланс.');
+    }
+  };
 
   const statsData = [
     { label: 'Испытывали влюблённость', value: 87, color: 'bg-gradient-to-r from-pink-500 to-purple-500' },
@@ -697,6 +777,75 @@ const Index = () => {
                   <p className="text-sm text-gray-600">Формулировка рекомендаций</p>
                 </div>
               </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-violet-50 to-fuchsia-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
+              Диагностика: Влюблён ли ты?
+            </h2>
+            <p className="text-xl text-gray-600">
+              Пройди тест и узнай, на какой стадии твои чувства
+            </p>
+          </div>
+
+          <Card className="bg-white border-2 border-violet-200 shadow-xl">
+            <CardContent className="p-8">
+              <div className="space-y-8">
+                {quizQuestions.map((q, index) => (
+                  <div key={q.id} className="space-y-4">
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {index + 1}. {q.question}
+                    </h3>
+                    <div className="space-y-3 pl-4">
+                      {q.options.map(option => (
+                        <label
+                          key={option.value}
+                          className={`flex items-start gap-3 p-4 rounded-lg border-2 cursor-pointer transition-all ${
+                            quizAnswers[q.id] === option.value
+                              ? 'border-violet-500 bg-violet-50'
+                              : 'border-gray-200 hover:border-violet-300 hover:bg-violet-50/50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name={q.id}
+                            value={option.value}
+                            checked={quizAnswers[q.id] === option.value}
+                            onChange={() => handleQuizAnswer(q.id, option.value)}
+                            className="mt-1 w-4 h-4 text-violet-600"
+                          />
+                          <span className="text-gray-700">{option.text}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 text-center">
+                <Button
+                  onClick={calculateQuizResult}
+                  className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white px-8 py-6 text-lg"
+                >
+                  Узнать результат
+                </Button>
+              </div>
+
+              {quizResult && (
+                <div className="mt-8 p-6 rounded-xl bg-gradient-to-r from-violet-100 to-fuchsia-100 border-2 border-violet-300">
+                  <h3 className="text-2xl font-bold mb-3 text-center text-violet-900">
+                    Твой результат:
+                  </h3>
+                  <p className="text-xl text-center text-violet-800 leading-relaxed">
+                    {quizResult}
+                  </p>
+                </div>
+              )}
             </CardContent>
           </Card>
         </div>
